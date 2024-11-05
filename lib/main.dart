@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled1/enter.dart';
 import 'package:untitled1/home.dart';
 
 void main(){
@@ -9,7 +10,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      initialRoute: Home.routeName,
+      routes: {
+        enter.routeName:(context)=>enter(),
+        Home.routeName:(context)=>Home(
+        ),
+
+      },
     );
   }
 }
